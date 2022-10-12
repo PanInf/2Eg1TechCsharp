@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Net.NetworkInformation;
 
 namespace KartaPracy4
 {
@@ -39,6 +40,53 @@ namespace KartaPracy4
             return alist;
         }
 
+        public static int Zad2(int n)
+        {
+            int suma_cyfr = 0;
+            int cyfra;
+            while (n > 0)
+            {
+                cyfra = n % 10;
+                suma_cyfr += cyfra;
+                n = n / 10;
+            }
+            return suma_cyfr;
+        }
+
+        public static int Silnia(int n)
+        {
+            if (n == 0)
+            {
+                return 1;
+            }
+            return n * Silnia(n - 1);
+        }
+
+        // Ankieta dla Was :) Proszę napisać silnie iteracyjnie
+        public static int SilniaIteracyjnie(int n)
+        {
+            int wynik = 1;
+            for (int i = 2; i <= n; i++)
+            {
+                wynik = wynik * i;
+            }
+            return wynik;
+        }
+
+        // Zad 4
+
+        public static int Fibo(int n)
+        {
+            if (n == 0)
+            {
+                return 0;
+            }
+            if (n == 1)
+            {
+                return 1;
+            }
+            return Fibo(n - 1) + Fibo(n - 2);
+        }
 
         static void Main(string[] args)
         {
@@ -90,7 +138,21 @@ namespace KartaPracy4
             {
                 Console.Write(a + " ");
             }*/
-            
+
+            // Zad 2
+            /*
+            int n = int.Parse(Console.ReadLine());
+            Console.WriteLine(Zad2(n));*/
+
+            // Zad 3
+            /*
+            int n = int.Parse(Console.ReadLine());
+            Console.WriteLine(SilniaIteracyjnie(n));*/
+
+            // Zad 4
+            int n = int.Parse(Console.ReadLine());
+            Console.WriteLine(Fibo(n));
+
             Console.ReadKey();
         }
     }
