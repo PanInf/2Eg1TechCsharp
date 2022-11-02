@@ -227,66 +227,92 @@ for (int i = 1; i < n + 1; i++)
 // 7 -> 11   3  8
 // 9 -> 14   4  10
 // n + n/2 + 1  => 3 * n/2 + 1
+
+// (1, 1)(1, 2)(1, 3)(1, 4)(1, 5)
+// (2, 1)(2, 2)(2, 3)(2, 4)(2, 5)
+// (3, 1)(3, 2)(3, 3)(3, 4)(3, 5)
+// (4, 1)(4, 2)(4, 3)(4, 4)(4, 5)
+// (5, 1)(5, 2)(5, 3)(5, 4)(5, 5)
+
+// bok lewa góra
+// n -> suma
+// 5 -> 4
+// 7 -> 5
+// 9 -> 6
+// n -> n/2 + 2
+
+// bok prawy dół
+// n -> suma
+// 5 -> 8
+// 7 -> 11
+// 9 -> 14
+// n -> n + n/2 + 1 = 3 * n/2 + 1
+
+// lewy dół i prawa góra
+// n -> różnica
+// 5 -> 2
+// 7 -> 3
+// 9 -> 4
+/*
 int n = int.Parse(Console.ReadLine());
 for (int i = 1; i < n + 1; i++)
 {
-
     for (int j = 1; j < n + 1; j++)
     {
-        
-        if (i + j == n/2 + 2 || i + j == 14) Console.Write("*");
-        else Console.Write("#");
+        if (i + j == n/2 + 2 || i + j == 3*n/2 + 1 || Math.Abs(i - j) == n/2) Console.Write("*");
+        else Console.Write(" ");
     }
     Console.WriteLine();
+}
+*/
+// Zad 5
 
-
-    // Zad 5
-
-    /*int n = int.Parse(Console.ReadLine());
-    for (int i = 1; i < n + 1; i++)
+/*int n = int.Parse(Console.ReadLine());
+for (int i = 1; i < n + 1; i++)
+{
+    for (int j = 1; j < n + 1; j++)
     {
-        for (int j = 1; j < n + 1; j++)
-        {
-            if (j == n / 2 + 1) Console.Write("*");
-            else if (i == n / 2 + 1) Console.Write("-");
-            else Console.Write(" ");
-        }
-        Console.WriteLine();
-    */
+        if (j == n / 2 + 1) Console.Write("*");
+        else if (i == n / 2 + 1) Console.Write("-");
+        else Console.Write(" ");
+    }
+    Console.WriteLine();
+*/
 
-    // Zad 6
-    /*
-    int n = int.Parse(Console.ReadLine());
-    for (int i = 1; i < n + 1; i++)
+// Zad 6
+/*
+int n = int.Parse(Console.ReadLine());
+for (int i = 1; i < n + 1; i++)
+{
+    for (int j = 1; j < n + 1; j++)
     {
-        for (int j = 1; j < n + 1; j++)
-        {
-            if (j == n - i + 1) Console.Write("?");
-            else if (i == j) Console.Write("*");
-            else Console.Write(" ");
-        }
-        Console.WriteLine();*/
-
-
-    /*for (int j = 1; j < n + 1; j++)
-    {
-        // (1,5) (2,4) (3,3) (4,2) (5,1)
-        // (1, 4) (2, 3) (3, 2) (4, 1) (5, 0)
-        // i == n
-        // i + 1 == n - 1
-        // i + j == n
-        // i == n - j
-
-        // i + j == n + 1
-
-        // i == n - j + 1
-        // gdy j == 1 to i == n
-
-        if (j <= n - i + 1) Console.Write("*");
-        else        Console.Write("#");
+        if (j == n - i + 1) Console.Write("?");
+        else if (i == j) Console.Write("*");
+        else Console.Write(" ");
     }
     Console.WriteLine();*/
+
+
+/*
+for (int j = 1; j < n + 1; j++)
+{
+    // (1,5) (2,4) (3,3) (4,2) (5,1)
+    // (1, 4) (2, 3) (3, 2) (4, 1) (5, 0)
+    // i == n
+    // i + 1 == n - 1
+    // i + j == n
+    // i == n - j
+
+    // i + j == n + 1
+
+    // i == n - j + 1
+    // gdy j == 1 to i == n
+
+    if (j <= n - i + 1) Console.Write("*");
+    else        Console.Write("#");
 }
+Console.WriteLine();
+*/
 
 
 // Zad 7
@@ -300,4 +326,5 @@ for (int i = 1; i < n + 1; i++)
         else Console.Write(" ");
     }
     Console.WriteLine();
-}*/
+}
+*/
