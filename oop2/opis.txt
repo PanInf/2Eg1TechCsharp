@@ -1,0 +1,11 @@
+Zadanie - Stwórz plik z klasami widocznymi na diagramie oop2.png. 
+
+- wszystkie klasy proszę umieścić w jednym pliku nad klasą główną z metodą Main().
+- metody mają być zaimplementowane wraz z returnem stringowym w stylu "metoda X z klasy Y" albo innym prostym komunikatem WriteLine().
+- modyfikatory pól i metod stosujcie wg uznania (public, private, protected) pamiętając o konsekwencjach 
+- dziedziczenia nie robicie (nie umiecie tego jeszcze)
+- asocjacje, czyli połączenia poziome obiektów, proszę zrobić tak jak to było na lekcji z Person i Adres 
+- asocjujemy Book z Libararian i Librarian z LibrararyDatabase
+- proszę w Main przeprowadzić testy z działania systemu na klasach asocjowanych
+
+W przypadku pytań jestem do dyspozycji
